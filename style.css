@@ -1,0 +1,122 @@
+body{
+  background-image: url(pics/bg3.png);
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.form-control{
+        padding: 0%;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    text-align: left;
+    padding: 0;
+
+}
+
+.logout{
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+
+.back{
+    float: left;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.btn{
+  font-family: 'Abel', sans-serif;
+}
+
+
+
+input[type="radio"]{
+    visibility: hidden;
+}
+
+#wrapper h1{
+  color: white;
+  font-size: 45pt;
+
+  font-family: 'Abel', sans-serif;
+
+
+}
+
+
+
+li{
+   
+    text-align: center;
+    margin-bottom: 5px;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.container {
+    font-family: 'Catamaran', sans-serif;
+    display: block;
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }

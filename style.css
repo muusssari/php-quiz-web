@@ -13,6 +13,22 @@ body{
         padding: 0%;
 }
 
+#content{
+  margin-left: 5px;
+  align-content: center;
+}
+
+#content label{
+  display:block;
+  color: white;
+  font-size: 20pt;
+}
+
+#content label select option{
+  color: black;
+ 
+}
+
 a{
   text-decoration: none;
 }

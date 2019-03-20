@@ -13,7 +13,7 @@
     if (!empty($_GET['page'])) {
         $PageNum = $_GET['page'];
         if ($PageNum == 1) {
-            include("quiz.php");
+            include("generatequiz.php");
         } 
         else if ($PageNum == 2) {
             include("pages/about.php");

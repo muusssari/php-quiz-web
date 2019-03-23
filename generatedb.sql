@@ -1,7 +1,7 @@
 CREATE TABLE users (
     idUsers int PRIMARY KEY AUTO_INCREMENT,
     uidUsers tinytext not null,
-    pwdUsers longtext not null,
+    pwdUsers longtext not null
 );
 CREATE TABLE quiz (
 idQuiz int PRIMARY KEY AUTO_INCREMENT,

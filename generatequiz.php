@@ -8,7 +8,7 @@ $questions = $conn->query("SELECT question FROM questions");
 while($row = $user->fetch_assoc()) {
     echo "id: " . $row["idUsers"]. " - Name: " . $row["uidUsers"]. " " . $row["pwdUsers"]. "<br>";
 }
-echo "<div class='middle' id='content' style='height:30px;'>";
+echo "<div class='middle' id='right' style='height:30px;'>";
 
 echo "<label>";
 while($row = $quizName->fetch_assoc()) {
@@ -26,11 +26,14 @@ while($row = $questions->fetch_assoc()) {
       <option value='cm'>cm</option>
       <option value='dm'>dm</option>
       <option value='mg'>mg</option>
-      <option value=''>kg</option>
+      <option value='kg'>kg</option>
     </select>";
 }
 echo "</label>";
 echo "<a href='includes/quiz.inc.php'><button type='submit' class='btn btn-primary btn-block'>Submit</button></a>";
 //menee quiz.inc.php  tarkistamaan vastaukset ja (ei toimi vielä) lukitsee 1 osion ja tarkistaa että kaikkiin on vastattu. 
 echo "</div>";
+
+
+
 ?>

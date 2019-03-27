@@ -9,6 +9,11 @@ body{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
+#main {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
 .form-control{
         padding: 0%;
 }

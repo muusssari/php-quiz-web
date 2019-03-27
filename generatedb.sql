@@ -12,7 +12,8 @@ quiz VARCHAR(50)
 CREATE TABLE questions (
     idQuestion int PRIMARY KEY AUTO_INCREMENT,
     question VARCHAR(50),
-    rightAns VARCHAR(50)
+    rightAns VARCHAR(50),
+    qType boolean
 );
 
 CREATE TABLE userAns (
@@ -34,10 +35,10 @@ CREATE TABLE collect (
 INSERT INTO quiz (quiz)
 VALUE ('Quiz test');
 
-INSERT INTO questions (question, rightAns)
-VALUE ('10 - 5 =', '5');
-INSERT INTO questions (question, rightAns)
-VALUE ('10 + 2 =', '12');
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('10 - 5 =', '5', true);
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('10 + 2 =', '12', false);
 
 INSERT INTO collect (idQuiz, idQuestion)
 VALUE (1,1);

@@ -1,11 +1,21 @@
 body{
   background-image: url(pics/bg3.png);
 }
+<<<<<<< HEAD
 header{
   display: block;
   padding: 50px;
   padding-bottom: 100px;
 }
+=======
+
+#dashWrap{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  color: white;
+}
+
+>>>>>>> bca4faa35ef1ae2accc7dbaddd25bfcea1cad2d1
 .middle {
     position: absolute;
     top: 50%;
@@ -31,6 +41,19 @@ header{
 }
 .form-control{
   padding: 0%;
+}
+
+#right{
+  align-content:center; 
+  max-width: 50%;
+  margin: auto;
+}
+
+#left{
+  max-width: 50%;
+  margin: auto;
+  align-content:center;
+
 }
 
 #content{

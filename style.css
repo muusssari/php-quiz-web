@@ -17,6 +17,7 @@ header{
 #main {
   display: grid;
   grid-template-columns: 30% 70%;
+  margin-top: 10%;
 }
 #right {
   align-content: center;
@@ -29,7 +30,7 @@ header{
   margin: auto;
 }
 .form-control{
-        padding: 0%;
+  padding: 0%;
 }
 
 #content{

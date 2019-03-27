@@ -25,7 +25,7 @@
     </div>
     <div id="right">
     <?php
-    include("generatequiz.php");
+    
     if (!empty($_GET['page'])) {
         $PageNum = $_GET['page'];
         if ($PageNum == 1) {
@@ -34,6 +34,9 @@
         else if ($PageNum == 2) {
             include("pages/about.php");
         }
+    }
+    else {
+        include("logo.php");
     }
     
     ?>

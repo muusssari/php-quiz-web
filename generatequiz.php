@@ -5,10 +5,9 @@ $quizName = $conn->query("SELECT quiz FROM quiz");
 $questions = $conn->query("SELECT question FROM questions");
 //hakee tiedot databasesta
 
-while($row = $user->fetch_assoc()) {
+/*while($row = $user->fetch_assoc()) {
     echo "id: " . $row["idUsers"]. " - Name: " . $row["uidUsers"]. " " . $row["pwdUsers"]. "<br>";
-}
-echo "<div class='middle' id='right' style='height:30px;'>";
+}*/
 
 echo "<label>";
 while($row = $quizName->fetch_assoc()) {
@@ -32,7 +31,6 @@ while($row = $questions->fetch_assoc()) {
 echo "</label>";
 echo "<a href='includes/quiz.inc.php'><button type='submit' class='btn btn-primary btn-block'>Submit</button></a>";
 //menee quiz.inc.php  tarkistamaan vastaukset ja (ei toimi vielä) lukitsee 1 osion ja tarkistaa että kaikkiin on vastattu. 
-echo "</div>";
 
 
 

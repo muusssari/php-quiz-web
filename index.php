@@ -6,20 +6,25 @@
 ?>
 <head>
     <?php 
-    require "header.php";
+    require "head.php";
     ?>
 </head>
 <main>
     <header>
     <?php
-
+        include_once("header.php");
     ?>
     </header>
     <section>
     <div id="main">
+    <div id="left">
     <?php
-
-    include("quiz_select.php");
+    
+    include_once("quiz_select.php");
+    ?>
+    </div>
+    <div id="right">
+    <?php
     include("generatequiz.php");
     if (!empty($_GET['page'])) {
         $PageNum = $_GET['page'];
@@ -33,18 +38,9 @@
     
     ?>
     </div>
-    </section>
-    <div>
-        <?php
-        if (isset($_SESSION['userId'])) {
-            echo '<p>You are logged in!</p>';
-        }
-        else{
-            echo '<p>You are logged out!</p>';
-        }
-        ?>
     </div>
-    <footer>
+
+<footer>
     <?php
     require_once "footer.php";
     ?>

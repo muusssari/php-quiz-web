@@ -2,6 +2,12 @@ body{
   background-image: url(pics/bg3.png);
 }
 
+#dashWrap{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  color: white;
+}
+
 .middle {
     position: absolute;
     top: 50%;
@@ -16,6 +22,19 @@ body{
 }
 .form-control{
         padding: 0%;
+}
+
+#right{
+  align-content:center; 
+  max-width: 50%;
+  margin: auto;
+}
+
+#left{
+  max-width: 50%;
+  margin: auto;
+  align-content:center;
+
 }
 
 #content{

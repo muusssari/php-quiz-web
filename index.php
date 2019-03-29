@@ -32,13 +32,18 @@
             include("generatequiz.php");
         } 
         else if ($PageNum == 2) {
-            include("pages/about.php");
+            include("generatequiz.php");
+            //include("pages/about.php");
+        }
+        else if ($PageNum == 3) {
+            include("generatequiz.php");
+            //include("pages/about.php");
         }
     }
     else {
+        //include("generatequiz.php");
         include("logo.php");
     }
-    
     ?>
     </div>
     </div>

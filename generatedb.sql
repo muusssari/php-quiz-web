@@ -33,14 +33,40 @@ CREATE TABLE collect (
 );
 ---------------------------------------------------------------------------------
 INSERT INTO quiz (quiz)
-VALUE ('Quiz test');
+VALUE ('Quiz test1');
 
 INSERT INTO questions (question, rightAns, qType)
 VALUE ('10 - 5 =', '5', true);
 INSERT INTO questions (question, rightAns, qType)
 VALUE ('10 + 2 =', '12', false);
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('10 - 2 =', '8', true);
 
 INSERT INTO collect (idQuiz, idQuestion)
 VALUE (1,1);
 INSERT INTO collect (idQuiz, idQuestion)
 VALUE (1,2);
+INSERT INTO collect (idQuiz, idQuestion)
+VALUE (1,3);
+
+
+INSERT INTO quiz (quiz)
+VALUE ('Quiz test2');
+
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('22cm =', '2.2', true);
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('13m =', '2.2', true);
+
+INSERT INTO collect (idQuiz, idQuestion)
+VALUE (2,4);
+INSERT INTO collect (idQuiz, idQuestion)
+VALUE (2,5);
+
+INSERT INTO quiz (quiz)
+VALUE ('Quiz test3');
+
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('1100=', '100', true);
+INSERT INTO collect (idQuiz, idQuestion)
+VALUE (3,6);

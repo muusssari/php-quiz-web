@@ -14,13 +14,10 @@ $quizNums .= "0";
 $questions = $conn->query("SELECT idQuestion, question, qType FROM questions WHERE $quizNums");
 
 
-
-
 /*
 while($row = $user->fetch_assoc()) {
     echo "id: " . $row["idUsers"]. " - Name: " . $row["uidUsers"]. " " . $row["pwdUsers"]. "<br>";
 }*/
-
 
 if(isset($_SESSION['name'])){
     echo "this:".$_SESSION['name'];
@@ -36,31 +33,33 @@ while($row = $quizName->fetch_assoc()) {
     while($row = $questions->fetch_assoc()) {
         $quizNum = "";
         $quizNum = "q" .$row["idQuestion"];
-        echo $row["idQuestion"];
+        //echo $row["idQuestion"];
+        echo $quizNum;
         if(isset($_SESSION[$quizNum])){
+            echo "<script>console.log( 'Debug Objects:". $_SESSION[$quizNum] . "' );</script>";
+            echo "<script>console.log( 'Debug Objects: set' );</script>";
             $selected = $_SESSION[$quizNum];
-            echo $_SESSION[$quizNum];
         }else {
             $selected=' ';
         }
-        
-        
+//--------------------------------------------------------------------------
         echo "<h1>" . $row["question"]. "</h1>";
         echo "<input type='text'  name=". $quizNum ." size='4' onchange='chkinput(this.value, $quizNum);' >";
         if($row["qType"] == 1) {
 
-            //echo "<script>console.log( 'Debug Objects:". $selected . "' );</script>";
+            echo "<script>console.log( 'Debug Objects:". $quizNum . "' );</script>";
             echo "<select name='". $quizNum."' onchange='chk(this.value, $quizNum);'>";
+            $options = '';
             foreach($messures as $k => $v)
             {
+                //echo "<script>console.log( 'Debug Objects:". $selected . "' );</script>";
                 if($selected==$v) {
                     $options.="<option value='".$selected."' selected>".$k."</option>";
-                    //echo "<script>console.log( 'Debug Objects:". $selected . "' );</script>";
                 }else {
                     $options.="<option value='".$v."'>".$k."</option>";
                 }
             }
-            $selected=' ';
+            $selected="";
             echo $options;
         echo "</select>";
         }
@@ -71,5 +70,9 @@ echo "<a href='includes/quiz.inc.php'><button type='submit' class='btn btn-prima
 //menee quiz.inc.php  tarkistamaan vastaukset ja (ei toimi vielä) lukitsee 1 osion ja tarkistaa että kaikkiin on vastattu. 
 echo "</form>";
 
+
+function makeDropdowns($sele, $k,$s) {
+    return;
+}
 
 ?>

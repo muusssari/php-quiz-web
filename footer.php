@@ -4,14 +4,14 @@
 <script>
     function chk(val, num) 
     {
-        /*let dataString=num.name +'='+val;;
-        window.location.href = "test.php?name=" + num.name + "&val="+val;
-        */
-        $.post('test.php', {val: val, name: num.name});
+        let dataString=num[1].name +'='+val;;
+        //window.location.href = "test.php?name=" + num[1].name + "&val="+val;
+        
+        $.post('test.php', {val: val, name: num[1].name});
         console.log("send");
     }
     function chkinput(val, num) {
-        $.post('test.php', {val: val, name: num.name});
+        $.post('test.php', {val: val, name: num[1].name});
     }
 </script>
 <!--- Load the Jquaries ---->

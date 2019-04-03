@@ -21,9 +21,9 @@ if(isset($_POST['save'])) {
             $sql = "INSERT INTO userAns (userAns,userAnsQ, idQuestion, idUsers, submit)
                         VALUES ('$valueInput','$valueDrop', '$x', '$s', true)";
                 if ($conn->query($sql) === TRUE) {
-                    //echo "New record created successfully";
+                    echo "New record created successfully";
                 } else {
-                    //echo "Error: " . $sql . "<br>" . $conn->error;
+                    echo "Error: " . $sql . "<br>" . $conn->error;
                 }
         }
     }
@@ -33,5 +33,5 @@ if(isset($_POST['save'])) {
     //echo "<h1>empty</h1>";
 }
 
-header("Location: ../index.php");
+//header("Location: ../index.php");
 ?>

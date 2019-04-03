@@ -1,3 +1,12 @@
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS quiz;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS userAns;
+DROP TABLE IF EXISTS subName;
+DROP TABLE IF EXISTS collect;
+SET FOREIGN_KEY_CHECKS = 1;
+
 CREATE TABLE users (
     idUsers int PRIMARY KEY AUTO_INCREMENT,
     uidUsers tinytext not null,
@@ -42,44 +51,50 @@ CREATE TABLE collect (
     FOREIGN KEY (idSub) REFERENCES subName(idSub)
 );
 ---------------------------------------------------------------------------------
+INSERT INTO subName (subName)
+VALUE ("testiostio 1");
+INSERT INTO subName (subName)
+VALUE ("testiostio 2");
+INSERT INTO subName (subName)
+VALUE ("testiostio 3");
+
 INSERT INTO quiz (quiz)
 VALUE ('Quiz test1');
 
-INSERT INTO questions (question, rightAns, userAnsQ, qType)
-VALUE ('10 - 5 =', '5', true);
-INSERT INTO questions (question, rightAns, userAnsQ, qType)
-VALUE ('10 + 2 =', '12', false);
-INSERT INTO questions (question, rightAns, userAnsQ, qType)
-VALUE ('10 - 2 =', '8', true);
+INSERT INTO questions (question, rightAns, rightAnsQ, qType)
+VALUE ('10 - 5 =', '1','5', true);
+INSERT INTO questions (question, rightAns, rightAnsQ, qType)
+VALUE ('10 + 2 =', '2','12', false);
+INSERT INTO questions (question, rightAns, rightAnsQ, qType)
+VALUE ('10 - 2 =', '3','8', true);
 
-INSERT INTO collect (idQuiz, idQuestion)
-VALUE (1,1);
-INSERT INTO collect (idQuiz, idQuestion)
-VALUE (1,2);
-INSERT INTO collect (idQuiz, idQuestion)
-VALUE (1,3);
-
+INSERT INTO collect (idQuiz, idQuestion,idSub)
+VALUE (1,1,1);
+INSERT INTO collect (idQuiz, idQuestion,idSub)
+VALUE (1,2,1);
+INSERT INTO collect (idQuiz, idQuestion,idSub)
+VALUE (1,3,1);
 
 INSERT INTO quiz (quiz)
 VALUE ('Quiz test2');
 
-INSERT INTO questions (question, rightAns, userAnsQ, qType)
-VALUE ('22cm =', '2.2', true);
-INSERT INTO questions (question, rightAns, userAnsQ, qType)
-VALUE ('13m =', '2.2', true);
+INSERT INTO questions (question, rightAns, rightAnsQ, qType)
+VALUE ('22cm =', '3','2.2', true);
+INSERT INTO questions (question, rightAns, rightAnsQ, qType)
+VALUE ('13m =', '3','2.2', true);
 
-INSERT INTO collect (idQuiz, idQuestion)
-VALUE (2,4);
-INSERT INTO collect (idQuiz, idQuestion)
-VALUE (2,5);
+INSERT INTO collect (idQuiz, idQuestion,idSub)
+VALUE (2,4,2);
+INSERT INTO collect (idQuiz, idQuestion,idSub)
+VALUE (2,5,2);
 
 INSERT INTO quiz (quiz)
 VALUE ('Quiz test3');
 
-INSERT INTO questions (question, rightAns, userAnsQ, qType)
-VALUE ('1100=', '100', true);
-INSERT INTO collect (idQuiz, idQuestion)
-VALUE (3,6);
+INSERT INTO questions (question, rightAns, rightAnsQ, qType)
+VALUE ('1100=', '3','100', true);
+INSERT INTO collect (idQuiz, idQuestion,idSub)
+VALUE (3,6,3);
 
 -----------------------------------------------------------------------------------
 

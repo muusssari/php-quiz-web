@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION['userId'])) {
+    header("Location: home.php?permission=false");
+}
 require 'includes/dbh.inc.php';
 echo "<script>console.log( 'start' );</script>";
 $num=$_GET['page'];
@@ -18,13 +21,14 @@ if(isset($_SESSION['name'])){
 }
 $messures=array('Value'=>1, 'μm'=>2,'mm'=>3,'cm'=>4,'dm'=>5,'mg'=>6,'kg'=>7);
 $options='';
-echo '<form action='.$_SERVER["PHP_SELF"].' method="POST">';
+echo '<form action="includes/quiz.inc.php" method="POST">';
 echo "<label>";
 while($row = $quizName->fetch_assoc()) {
     echo "<h2>" . $row["quiz"]. "</h2>";
     
     //Luo niin monta tehtävää kun databasesta löytyy
     while($row = $questions->fetch_assoc()) {
+        $_SESSION['idQuestion']=$row["idQuestion"];
         $quizNum = "";
         $quizNum = "q" .$row["idQuestion"];
         $quizNumInput = "";
@@ -63,13 +67,8 @@ while($row = $quizName->fetch_assoc()) {
     }
 }
 echo "</label>";
-echo "<a href='includes/quiz.inc.php'><button type='submit' class='btn btn-primary btn-block'>Submit</button></a>";
+echo "<button type='submit' name='save' class='btn btn-primary btn-block'>Submit</button>";
 //menee quiz.inc.php  tarkistamaan vastaukset ja (ei toimi vielä) lukitsee 1 osion ja tarkistaa että kaikkiin on vastattu. 
 echo "</form>";
-
-
-function makeDropdowns($sele, $k,$s) {
-    return;
-}
 
 ?>

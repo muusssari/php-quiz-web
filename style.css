@@ -118,25 +118,40 @@ li{
 
 .form-control-genquiz{
   width: 100px!important;
-  display: inline!important;
+  display: inline-block!important;
   margin-left: 4px;
+  margin-top: 6%;
+  height: 45px!important;
+ 
+}
+
+#right form label select .form-control-genquiz{
+  width: 100px!important;
+  display: inline-block!important;
+  margin-left: 4px;
+  margin-top: 6%;
+  height: 45px!important;
+  
+ 
 }
 
 
 
 #right form label label{
   color: white;
-  font-size: 20pt;
+  font-size: 40pt;
   display: inline;
   font-family: 'Abel', sans-serif;
 }
 
+
 #right form label h2{
   color: white;
-  font-size: 45pt;
+  font-size: 25pt;
   display: block;
   font-family: 'Abel', sans-serif;
   text-align: center;
+ 
 }
 
 #right form{

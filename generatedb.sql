@@ -25,12 +25,19 @@ CREATE TABLE userAns (
     FOREIGN KEY (idQuestion) REFERENCES questions(idQuestion),
     FOREIGN KEY (idUsers) REFERENCES users(idUsers)
 );
+CREATE TABLE subName (
+    idSub int PRIMARY KEY AUTO_INCREMENT,
+    subName int
+);
+
 CREATE TABLE collect (
     idCollect int PRIMARY KEY AUTO_INCREMENT,
     idQuiz int,
+    idSub int,
     idQuestion int,
     FOREIGN KEY (idQuiz) REFERENCES quiz(idQuiz),
-    FOREIGN KEY (idQuestion) REFERENCES questions(idQuestion)
+    FOREIGN KEY (idQuestion) REFERENCES questions(idQuestion),
+    FOREIGN KEY (idSub) REFERENCES subName(idSub)
 );
 ---------------------------------------------------------------------------------
 INSERT INTO quiz (quiz)
@@ -71,3 +78,22 @@ INSERT INTO questions (question, rightAns, qType)
 VALUE ('1100=', '100', true);
 INSERT INTO collect (idQuiz, idQuestion)
 VALUE (3,6);
+
+-----------------------------------------------------------------------------------
+
+INSERT INTO quiz (quiz)
+VALUE ('Math test for selecting students');
+
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('98 + 56 - 45 =', '109', true);
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('626 - 668 + 538 =', '496', false);
+INSERT INTO questions (question, rightAns, qType)
+VALUE ('6-7*9-5 ', '8', true);
+
+INSERT INTO collect (idQuiz, idQuestion)
+VALUE (1,1);
+INSERT INTO collect (idQuiz, idQuestion)
+VALUE (1,2);
+INSERT INTO collect (idQuiz, idQuestion)
+VALUE (1,3);

@@ -36,7 +36,7 @@ while($row = $quizName->fetch_assoc()) {
             $selected=' ';
         }
 //--------------------------------------------------------------------------
-        echo "<label><br>" . $row["question"]. "</label>";
+        echo "<label><br>" . $row["question"];
 
         if(isset($_SESSION[$quizNumInput])){
             echo "<input  class='form-control form-control-genquiz' type='text'  name=". $quizNumInput ." size='4' value='".$_SESSION[$quizNumInput]."' onchange='chkinput(this.value, $quizNumInput);' >";
@@ -58,7 +58,7 @@ while($row = $quizName->fetch_assoc()) {
             }
             $selected="";
             echo $options;
-        echo "</select>";
+        echo "</select></label>";
         }
     }
 }

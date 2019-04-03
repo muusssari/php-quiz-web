@@ -3,15 +3,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
     function chk(val, num) 
-    {
-        let dataString=num[1].name +'='+val;;
-        //window.location.href = "test.php?name=" + num[1].name + "&val="+val;
-        
-        $.post('test.php', {val: val, name: num[1].name});
+    {   
+        $.post('onChangeSave.php', {val: val, name: num[1].name});
         console.log("send");
+        //dropdown saving onchange
     }
     function chkinput(val, num) {
-        $.post('test.php', {val: val, name: num[1].name});
+        $.post('onChangeSave.php', {val: val, name: num.name});
+        console.log("send");
+        //Input saving onchange
     }
 </script>
-<!--- Load the Jquaries ---->

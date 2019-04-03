@@ -1,13 +1,13 @@
 CREATE TABLE users (
     idUsers int PRIMARY KEY AUTO_INCREMENT,
     uidUsers tinytext not null,
-    pwdUsers longtext not null
+    pwdUsers longtext not null,
+    permiss boolean
 );
 CREATE TABLE quiz (
 idQuiz int PRIMARY KEY AUTO_INCREMENT,
 quiz VARCHAR(50)
 );
-
 
 CREATE TABLE questions (
     idQuestion int PRIMARY KEY AUTO_INCREMENT,
@@ -21,6 +21,7 @@ CREATE TABLE userAns (
     userAns VARCHAR(50),
     idQuestion int,
     idUsers int,
+    submit boolean,
     FOREIGN KEY (idQuestion) REFERENCES questions(idQuestion),
     FOREIGN KEY (idUsers) REFERENCES users(idUsers)
 );

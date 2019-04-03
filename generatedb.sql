@@ -19,6 +19,7 @@ CREATE TABLE questions (
 CREATE TABLE userAns (
     idUserAns int PRIMARY KEY AUTO_INCREMENT,
     userAns VARCHAR(50),
+    userAnsQ VARCHAR(50),
     idQuestion int,
     idUsers int,
     submit boolean,

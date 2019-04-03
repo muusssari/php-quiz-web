@@ -28,6 +28,7 @@ while($row = $quizName->fetch_assoc()) {
     
     //Luo niin monta tehtävää kun databasesta löytyy
     while($row = $questions->fetch_assoc()) {
+        $_SESSION['idQuestion']=$row["idQuestion"];
         $quizNum = "";
         $quizNum = "q" .$row["idQuestion"];
         $quizNumInput = "";
@@ -69,10 +70,5 @@ echo "</label>";
 echo "<button type='submit' name='save' class='btn btn-primary btn-block'>Submit</button>";
 //menee quiz.inc.php  tarkistamaan vastaukset ja (ei toimi vielä) lukitsee 1 osion ja tarkistaa että kaikkiin on vastattu. 
 echo "</form>";
-
-
-function makeDropdowns($sele, $k,$s) {
-    return;
-}
 
 ?>

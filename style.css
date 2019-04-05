@@ -2,6 +2,10 @@ body{
   background-image: url(pics/bg3.png);
 }
 
+header{
+  height: 1%;
+}
+
 #dashWrap{
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -63,7 +67,6 @@ body{
   color: black;
  
 }
-
 a{
   text-decoration: none;
 }
@@ -91,8 +94,6 @@ ul {
   font-family: 'Abel', sans-serif;
 }
 
-
-
 input[type="radio"]{
     visibility: hidden;
 }
@@ -100,13 +101,8 @@ input[type="radio"]{
 #wrapper h1{
   color: white;
   font-size: 45pt;
-
   font-family: 'Abel', sans-serif;
-
-
 }
-
-
 
 li{
    
@@ -135,8 +131,6 @@ li{
  
 }
 
-
-
 #right form label label{
   color: white;
   font-size: 40pt;
@@ -144,16 +138,42 @@ li{
   font-family: 'Abel', sans-serif;
 }
 
-
 #right form label h2{
   color: white;
   font-size: 25pt;
   display: block;
   font-family: 'Abel', sans-serif;
   text-align: center;
- 
 }
 
 #right form{
   width: 100%;
 }
+
+ul li button{
+  font-size: 50pt;
+}
+
+#dashCont li{
+  text-align: left;
+}
+.container-fluid{
+  font-family: 'Abel', sans-serif;
+}
+
+#dashCont{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  }
+
+  .card{
+    margin-right: 4%;
+    margin-top: 6%;
+  }
+
+  .selectH{
+    font-family: 'Abel', sans-serif; 
+    font-size:40pt;
+    font-weight: bold;
+    text-align: center;
+  }

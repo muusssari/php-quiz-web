@@ -1,12 +1,19 @@
-<<<<<<< HEAD
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS quiz;
+DROP TABLE IF EXISTS questions;
+DROP TABLE IF EXISTS userAns;
+DROP TABLE IF EXISTS subName;
+DROP TABLE IF EXISTS collect;
+
 CREATE TABLE users (
     idUsers int PRIMARY KEY AUTO_INCREMENT,
     uidUsers tinytext not null,
     pwdUsers longtext not null,
-    permiss boolean
+    permiss boolean DEFAULT FALSE
 );
 CREATE TABLE quiz (
 idQuiz int PRIMARY KEY AUTO_INCREMENT,
+subName VARCHAR(50),
 quiz VARCHAR(50)
 );
 
@@ -30,7 +37,7 @@ CREATE TABLE userAns (
 );
 CREATE TABLE subName (
     idSub int PRIMARY KEY AUTO_INCREMENT,
-    subName int
+    sub VARCHAR(50)
 );
 
 CREATE TABLE collect (
@@ -548,4 +555,4 @@ INSERT INTO collect (idQuiz, idQuestion)
 VALUE (1,2);
 INSERT INTO collect (idQuiz, idQuestion)
 VALUE (1,3);
->>>>>>> b84bfcf3564dd9474c02473a1483aadc109e5a35
+

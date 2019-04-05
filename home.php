@@ -29,12 +29,12 @@
         <form action="includes/login.inc.php" method="post">
 
             <input type="text" name="username" class="form-control" data-toggle="tooltip" data-placement="right" 
-            placeholder="Username" pattern="[a-ö]+" title="Only lowercase letters in username"><br>
+            placeholder="Username" pattern="[a-ö0-9]+" title="Only lowercase letters in username"><br>
             
             <input type="password" name="psw" class="form-control" data-toggle="tooltip" data-placement="right" 
             placeholder="Password" pattern=".{5,}" title="Atleast 5 characters in password"><br>
 
-            <button class="btn btn-outline-success btn-block" type="submit" name="login">Log in</button>
+            <button class="btn btn-success btn-block" type="submit" name="login">Log in</button>
 
         </form>
     </div>

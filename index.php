@@ -18,10 +18,12 @@
     <section>
     <div id="main">
     <div id="left">
+    <div class='card'><div class='card-content'>
     <?php
-    
     include_once("quiz_select.php");
     ?>
+    </div>
+</div>
     </div>
     <div id="right">
     <?php

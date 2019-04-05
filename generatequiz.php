@@ -19,10 +19,10 @@ $questions = $conn->query("SELECT idQuestion, question, qType FROM questions WHE
 if(isset($_SESSION['name'])){
     echo "this:".$_SESSION['name'];
 }
-$messures=array('Value'=>1, 'μm'=>2,'mm'=>3,'cm'=>4,'dm'=>5,'mg'=>6,'kg'=>7);
+$messures=array('Value'=>1, 'L'=>2,'ml'=>3,'mm'=>4,'g'=>5,'mg'=>6,'μm'=>7);
 $options='';
+echo '<div class="card"><div class="card-content">';
 echo '<form action="includes/quiz.inc.php" method="POST">';
-echo "<label>";
 while($row = $quizName->fetch_assoc()) {
     echo "<h2>" . $row["quiz"]. "</h2>";
     
@@ -40,12 +40,12 @@ while($row = $quizName->fetch_assoc()) {
             $selected=' ';
         }
 //--------------------------------------------------------------------------
-        echo "<label><br>" . $row["question"];
-
+        echo "<br><label>" . $row["question"]."</label>";
+        
         if(isset($_SESSION[$quizNumInput])){
-            echo "<input  class='form-control form-control-genquiz' type='text'  name=". $quizNumInput ." size='4' value='".$_SESSION[$quizNumInput]."' onchange='chkinput(this.value, $quizNumInput);' >";
+            echo "<input class='form-control form-control-genquiz' type='text'  name=". $quizNumInput ." size='4' value='".$_SESSION[$quizNumInput]."' onchange='chkinput(this.value, $quizNumInput);' >";
         }else {
-            echo "<input  class='form-control form-control-genquiz' type='text'  name=". $quizNumInput ." size='4' onchange='chkinput(this.value, $quizNumInput);' >";
+            echo "<input class='form-control form-control-genquiz' type='text'  name=". $quizNumInput ." size='4' onchange='chkinput(this.value, $quizNumInput);' >";
         }
         
         if($row["qType"] == 1) {
@@ -62,13 +62,13 @@ while($row = $quizName->fetch_assoc()) {
             }
             $selected="";
             echo $options;
-        echo "</select></label>";
+        echo "</select>";
         }
     }
 }
-echo "</label>";
-echo "<button type='submit' name='save' class='btn btn-primary btn-block'>Submit</button>";
+echo "<br><button type='submit' name='save' class='btn btn-primary btn-block' style='margin-top: 5%;'>Submit</button>";
 //menee quiz.inc.php  tarkistamaan vastaukset ja (ei toimi vielä) lukitsee 1 osion ja tarkistaa että kaikkiin on vastattu. 
 echo "</form>";
+echo "</div></div>"
 
 ?>

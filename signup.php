@@ -39,7 +39,7 @@
             <input type="password" name="suPsw-repeat" class="form-control" data-toggle="tooltip" data-placement="right" 
             placeholder="Repeat password" pattern=".{5,}" title="Repeat you password"><br>
 
-           <button class="btn btn-outline-success btn-block" type="submit" name="signup">Sign up</button>
+           <button class="btn btn-success btn-block" type="submit" name="signup">Sign up</button>
 
     </form>
 

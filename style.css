@@ -30,11 +30,7 @@ header{
   max-width: 50%;
   margin: auto;
 }
-#left {
-  align-content: center;
-  max-width: 50%;
-  margin: auto;
-}
+
 .form-control{
   padding: 0%;
 }
@@ -46,7 +42,7 @@ header{
 }
 
 #left{
-  max-width: 50%;
+  width: auto;
   margin: auto;
   align-content:center;
 
@@ -104,6 +100,10 @@ input[type="radio"]{
   font-family: 'Abel', sans-serif;
 }
 
+#main{
+  height: 54vh;
+}
+
 li{
    
     text-align: center;
@@ -131,16 +131,19 @@ li{
  
 }
 
-#right form label label{
-  color: white;
-  font-size: 40pt;
-  display: inline;
-  font-family: 'Abel', sans-serif;
+#right .card .card-content form label{
+  font-size: 25pt;
 }
 
-#right form label h2{
-  color: white;
-  font-size: 25pt;
+#right .card{
+  padding: 30px;
+  min-width: 450px;
+  border-radius: 18px;
+}
+
+#right form h2{
+  font-size: 40pt;
+  font-weight:bold;
   display: block;
   font-family: 'Abel', sans-serif;
   text-align: center;
@@ -169,6 +172,7 @@ ul li button{
   .card{
     margin-right: 4%;
     margin-top: 6%;
+    background-color: whitesmoke!important;
   }
 
   .selectH{
@@ -176,4 +180,27 @@ ul li button{
     font-size:40pt;
     font-weight: bold;
     text-align: center;
+  }
+
+  
+  .selectH button{
+    font-family: 'Abel', sans-serif; 
+    font-size:25pt;
+    text-align: center;
+    width: auto;
+  }
+
+  section #main #left .card{
+    padding: 10%;
+    width:100%;
+    border-radius: 18px;
+    position: sticky;
+  }
+
+  #ansInp{
+    padding-bottom: 10px;
+  }
+
+  .btn{
+    white-space: normal!important;
   }

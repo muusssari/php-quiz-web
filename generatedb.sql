@@ -1,4 +1,12 @@
-<<<<<<< HEAD
+
+
+TRUNCATE TABLE users;
+TRUNCATE TABLE quiz;
+TRUNCATE TABLE questions;
+TRUNCATE TABLE userAns;
+TRUNCATE TABLE subName;
+TRUNCATE TABLE collect;
+
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS quiz;
 DROP TABLE IF EXISTS questions;
@@ -6,8 +14,6 @@ DROP TABLE IF EXISTS userAns;
 DROP TABLE IF EXISTS subName;
 DROP TABLE IF EXISTS collect;
 
-=======
->>>>>>> 67ce217374285792fcc6ab6ea0008766f5d882fa
 CREATE TABLE users (
     idUsers int PRIMARY KEY AUTO_INCREMENT,
     uidUsers tinytext not null,
@@ -40,11 +46,7 @@ CREATE TABLE userAns (
 );
 CREATE TABLE subName (
     idSub int PRIMARY KEY AUTO_INCREMENT,
-<<<<<<< HEAD
     sub VARCHAR(50)
-=======
-    subName VARCHAR(50)
->>>>>>> 67ce217374285792fcc6ab6ea0008766f5d882fa
 );
 
 CREATE TABLE collect (
@@ -287,7 +289,3 @@ INSERT INTO collect (idQuiz, idQuestion)
 VALUE (1,2);
 INSERT INTO collect (idQuiz, idQuestion)
 VALUE (1,3);
-<<<<<<< HEAD
-
-=======
->>>>>>> 67ce217374285792fcc6ab6ea0008766f5d882fa

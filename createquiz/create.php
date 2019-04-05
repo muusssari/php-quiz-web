@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +11,8 @@
 </head>
 <body onload="generateCreate()">
     <div id="id"></div>
-    <?php
-    session_start();
-    $name = 22;
-    ?>
-    <script type="text/javascript" src="main.js">
-        var php = "<?php echo $name; ?>";
-        console.log(php);
-    </script>
+    
+    <script type="text/javascript" src="main.js"></script>
     
     
 </body>

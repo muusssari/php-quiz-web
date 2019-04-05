@@ -10,18 +10,23 @@ function generateCreate() {
     if(start == 3) {
         var i = document.createElement("input");
         i.setAttribute('type',"text");
-        i.setAttribute('name',"question");
+        i.setAttribute('id',"question");
         i.setAttribute('placeholder','question');
 
         var i2 = document.createElement("input");
         i2.setAttribute('type',"text");
-        i2.setAttribute('name',"answer");
-        i2.setAttribute('placeholder','answer');
+        i2.setAttribute('id',"rightAns");
+        i2.setAttribute('placeholder','rightAns');
 
         var i3 = document.createElement("input");
         i3.setAttribute('type',"text");
-        i3.setAttribute('name',"question");
-        i3.setAttribute('placeholder','question');
+        i3.setAttribute('id',"rightAnsQ");
+        i3.setAttribute('placeholder','rightAnsQ');
+
+        var i4 = document.createElement("input");
+        i4.setAttribute('type',"text");
+        i4.setAttribute('id',"qType");
+        i4.setAttribute('placeholder','TRUE OR FALSE');
 
         var s = document.createElement("input");
         s.setAttribute('type',"button");
@@ -34,10 +39,11 @@ function generateCreate() {
 
         f.appendChild(i2);
         f.appendChild(i3);
+        f.appendChild(i4);
     }else if(start == 2) {
         var i = document.createElement("input");
         i.setAttribute('type',"text");
-        i.setAttribute('name',"sub2");
+        i.setAttribute('id',"sub2");
         i.setAttribute('placeholder','subname2');
 
         var s = document.createElement("input");
@@ -52,12 +58,12 @@ function generateCreate() {
 
         var i = document.createElement("input");
         i.setAttribute('type',"text");
-        i.setAttribute('name',"quiz");
+        i.setAttribute('id',"quiz");
         i.setAttribute('placeholder','quizname');
 
         var i2 = document.createElement("input");
         i2.setAttribute('type',"text");
-        i2.setAttribute('name',"subname");
+        i2.setAttribute('id',"subname");
         i2.setAttribute('placeholder','subname');
 
         var s = document.createElement("input");
@@ -78,6 +84,16 @@ function generateCreate() {
 }
 
 function save1() {
+    let quiz = document.getElementById("quiz").value;
+    let subname = document.getElementById("subname").value;
+    $.ajax({  
+        type: 'POST',  
+        url: 'saveCreatedQuiz.php', 
+        data: { quiz: quiz, subname: subname },
+        success: function(response) {
+            console.log(response);
+        }
+    });
     start = 2;
     generateCreate();
 }
@@ -85,7 +101,17 @@ function done() {
     let done = $("<i></i>").text("Done!");
     $('#id').append(done);
 }
+
 function save2() {
+    let sub2 = document.getElementById("sub2").value;
+    $.ajax({  
+        type: 'POST',  
+        url: 'saveCreatedQuiz.php', 
+        data: { sub2: sub2},
+        success: function(response) {
+            console.log(response);
+        }
+    });
     start = 3;
     generateCreate();
 }
@@ -94,14 +120,21 @@ function save2Back1() {
     generateCreate();
 }
 function save3() {
+    let question = document.getElementById("question").value;
+    let rightAns = document.getElementById("rightAns").value;
+    let rightAnsQ = document.getElementById("rightAnsQ").value;
+    let qType = document.getElementById("qType").value;
+    $.ajax({  
+        type: 'POST',  
+        url: 'saveCreatedQuiz.php', 
+        data: { question: question, rightAns: rightAns, rightAnsQ: rightAnsQ, qType: qType,},
+        success: function(response) {
+            console.log(response);
+        }
+    });
     generateCreate();
 }
 function save3Back2() {
     start = 2;
     generateCreate();
 }
-
-
-
-
-

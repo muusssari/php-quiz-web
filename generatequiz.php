@@ -47,7 +47,6 @@ $options='';
 echo '<div class="card"><div class="card-content">';
 echo '<form action="includes/quiz.inc.php" method="POST">';
 //Aloitetaan subin luonti ja kysymykset
-
 while($row = $quizSubName->fetch_assoc()) {
     echo "<h2>" . $row["subName"]. "</h2>"; //Ottaa pääotsikon
     for ($x = $lowID; $x <= $subID; $x++) {

@@ -28,22 +28,11 @@
     <div id="right">
     <?php
     
-    if (!empty($_GET['page'])) {
-        $PageNum = $_GET['page'];
-        if ($PageNum == 1) {
-            include("generatequiz.php");
-        } 
-        else if ($PageNum == 2) {
-            include("generatequiz.php");
-            //include("pages/about.php");
-        }
-        else if ($PageNum == 3) {
-            include("generatequiz.php");
-            //include("pages/about.php");
-        }
+    if (!empty($_GET['page'])) 
+    {
+        include("generatequiz.php");
     }
     else {
-        //include("generatequiz.php");
         include("logo.php");
     }
     ?>

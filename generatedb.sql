@@ -41,6 +41,7 @@ CREATE TABLE userAns (
     idQuestion int,
     idUsers int,
     submit boolean,
+    points int,
     FOREIGN KEY (idQuestion) REFERENCES questions(idQuestion),
     FOREIGN KEY (idUsers) REFERENCES users(idUsers)
 );

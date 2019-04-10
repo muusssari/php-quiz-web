@@ -204,3 +204,38 @@ ul li button{
   .btn{
     white-space: normal!important;
   }
+
+  #id form input{
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+
+  .create_btn{
+    width: 100%;
+    margin: auto;
+  }
+
+  #id{
+    width: 30%;
+    margin: auto;
+    align-content: center;
+    margin-top: 2%;
+  }
+
+  .crth1{
+    text-align: center;
+    margin: auto;
+    margin-top: 20%;
+    color: white;
+    font-family: 'Abel', sans-serif; 
+
+  }
+
+  .doneStyle{
+    color: white;
+    font-family: 'Abel', sans-serif; 
+    font-size: 25pt;
+    font-weight: bold;
+    margin-top: 2%;
+  }

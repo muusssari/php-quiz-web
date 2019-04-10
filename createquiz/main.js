@@ -114,7 +114,7 @@ function save1() {
     let subname = document.getElementById("subname").value;
     $.ajax({  
         type: 'POST',  
-        url: 'saveCreatedQuiz.php', 
+        url: 'createquiz/saveCreatedQuiz.php', 
         data: { quiz: quiz, subname: subname },
         success: function(response) {
             console.log(response);
@@ -132,7 +132,7 @@ function save2() {
     let sub2 = document.getElementById("sub2").value;
     $.ajax({  
         type: 'POST',  
-        url: 'saveCreatedQuiz.php', 
+        url: 'createquiz/saveCreatedQuiz.php', 
         data: { sub2: sub2},
         success: function(response) {
             console.log(response);
@@ -152,7 +152,7 @@ function save3() {
     let qType = document.getElementById("qType").value;
     $.ajax({  
         type: 'POST',  
-        url: 'saveCreatedQuiz.php', 
+        url: 'createquiz/saveCreatedQuiz.php', 
         data: { question: question, rightAns: rightAns, rightAnsQ: rightAnsQ, qType: qType,},
         success: function(response) {
             console.log(response);

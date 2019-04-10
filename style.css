@@ -120,6 +120,9 @@ li{
   height: 45px!important;
  
 }
+.form-control {
+  display: inline!important;
+}
 
 #right form label select .form-control-genquiz{
   width: 100px!important;

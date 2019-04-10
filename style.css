@@ -22,7 +22,7 @@ header{
 
 #main {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 40% 60%;
   margin-top: 10%;
 }
 #right {
@@ -37,12 +37,11 @@ header{
 
 #right{
   align-content:center; 
-  max-width: 50%;
+  max-width: 80%;
   margin: auto;
 }
 
 #left{
-  width: auto;
   margin: auto;
   align-content:center;
 
@@ -121,7 +120,7 @@ li{
  
 }
 .form-control {
-  display: inline!important;
+  display: inline-block!important;
 }
 
 #right form label select .form-control-genquiz{
@@ -169,8 +168,16 @@ ul li button{
 
 #dashCont{
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template: 40% 60%;
   }
+
+#dashLeft{
+float:left;
+}
+
+#dashMid{
+float:left;
+}
 
   .card{
     margin-right: 4%;
@@ -195,7 +202,7 @@ ul li button{
 
   section #main #left .card{
     padding: 10%;
-    width:100%;
+    width: 200%;
     border-radius: 18px;
     position: sticky;
   }

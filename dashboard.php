@@ -29,7 +29,6 @@
             </div> 
         </div>
         </div>
-
     <div id="dashMid">
     <div class="card">
             <div class="card-header"><h2>Quizzes completed and points: </h2></div>

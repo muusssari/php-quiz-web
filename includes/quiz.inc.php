@@ -28,8 +28,6 @@ if(isset($_POST['save'])) {
                 }
         }
     }
-    
-    
 }else {
     //echo "<h1>empty</h1>";
 }

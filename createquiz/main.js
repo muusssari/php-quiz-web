@@ -5,34 +5,37 @@ let layer2ID = 0;
 
 generateCreate();
 function generateCreate() {
-    document.getElementById('id').innerHTML='';
+    let divi = document.getElementById('id');
+    divi.innerHTML='';
+    divi.innerHTML='<h1 class="selectH">Create quiz</h1>';
+
     var f = document.createElement("form");
     if(start == 3) {
         var i = document.createElement("input");
         i.setAttribute('type',"text");
         i.setAttribute('id',"question");
-        i.setAttribute('placeholder','question');
-        i.setAttribute('class', 'form-control');
+        i.setAttribute('placeholder','Question');
+        i.setAttribute('class', 'form-control crtQuiz');
 
 
         var i2 = document.createElement("input");
         i2.setAttribute('type',"text");
         i2.setAttribute('id',"rightAns");
-        i2.setAttribute('placeholder','rightAns');
-        i2.setAttribute('class', 'form-control');
+        i2.setAttribute('placeholder','Right answer');
+        i2.setAttribute('class', 'form-control crtQuiz');
 
         var i3 = document.createElement("input");
         i3.setAttribute('type',"text");
         i3.setAttribute('id',"rightAnsQ");
-        i3.setAttribute('placeholder','rightAnsQ');
-        i3.setAttribute('class', 'form-control');
+        i3.setAttribute('placeholder','Select right option (1-7)');
+        i3.setAttribute('class', 'form-control crtQuiz');
 
 
         var i4 = document.createElement("input");
         i4.setAttribute('type',"text");
         i4.setAttribute('id',"qType");
-        i4.setAttribute('placeholder','TRUE OR FALSE');
-        i4.setAttribute('class', 'form-control');
+        i4.setAttribute('placeholder','Options box for answer (true/false)');
+        i4.setAttribute('class', 'form-control crtQuiz');
 
 
         var s = document.createElement("input");
@@ -46,18 +49,17 @@ function generateCreate() {
         s2.setAttribute('type',"button");
         s2.setAttribute('value',"NextSub");
         s2.setAttribute('onclick','save3Back2()');
-        s2.setAttribute('class', 'btn btn-outline-light create_btn');
+        s2.setAttribute('class', 'btn btn-outline-dark create_btn');
 
-
-        f.appendChild(i2);
-        f.appendChild(i3);
         f.appendChild(i4);
+        f.appendChild(i3);
+        f.appendChild(i2);
     }else if(start == 2) {
         var i = document.createElement("input");
         i.setAttribute('type',"text");
         i.setAttribute('id',"sub2");
-        i.setAttribute('placeholder','subname2');
-        i.setAttribute('class', 'form-control');
+        i.setAttribute('placeholder','Additional title for instructions (optional)');
+        i.setAttribute('class', 'form-control crtQuiz');
 
 
         var s = document.createElement("input");
@@ -70,22 +72,22 @@ function generateCreate() {
         s2.setAttribute('type',"button");
         s2.setAttribute('value',"NextQuiz");
         s2.setAttribute('onclick','save2Back1()');
-        s2.setAttribute('class', 'btn btn-outline-light create_btn');
+        s2.setAttribute('class', 'btn btn-outline-dark create_btn');
 
     }else {
 
         var i = document.createElement("input");
         i.setAttribute('type',"text");
         i.setAttribute('id',"quiz");
-        i.setAttribute('placeholder','quizname');
-        i.setAttribute('class', 'form-control');
+        i.setAttribute('placeholder','Quiz title');
+        i.setAttribute('class', 'form-control crtQuiz');
 
 
         var i2 = document.createElement("input");
         i2.setAttribute('type',"text");
         i2.setAttribute('id',"subname");
-        i2.setAttribute('placeholder','subname');
-        i2.setAttribute('class', 'form-control');
+        i2.setAttribute('placeholder','Your question section title');
+        i2.setAttribute('class', 'form-control crtQuiz');
 
 
         var s = document.createElement("input");
@@ -98,9 +100,10 @@ function generateCreate() {
         s2.setAttribute('type',"button");
         s2.setAttribute('value',"Done");
         s2.setAttribute('onclick','done()');
-        s2.setAttribute('class', 'btn btn-outline-light create_btn');
+        s2.setAttribute('class', 'btn btn-outline-dark create_btn');
 
 
+        
         f.appendChild(i2);
     }
     f.appendChild(i);
@@ -108,6 +111,8 @@ function generateCreate() {
     f.appendChild(s2);
     $('#id').append(f);
 }
+
+
 
 function save1() {
     let quiz = document.getElementById("quiz").value;

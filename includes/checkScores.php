@@ -5,11 +5,8 @@ if(isset($_POST['id'])) {
     
     $quiz = $conn->query("SELECT * FROM quiz");
     
-    $student = $conn->query("SELECT * FROM userAns WHERE idUsers=$id");
-    //$number=mysqli_num_rows($quiz);
-    for($x = 0; $x < 20; $x++) {
         while($row = $quiz->fetch_assoc()) {
-            echo "<h3>Quiz Name: " . $row['quiz'];
+            echo "<div class='card'><div class='card-content'><h3>Quiz Name: <b style='font-size:25pt;'>" . $row['quiz'] . "</b>";
             $scores = 0;
             $done = false;
             $qID = $row['idQuiz'];
@@ -27,13 +24,12 @@ if(isset($_POST['id'])) {
                 }
             }
             if($done == 1){
-                echo " Done </h3><br>";
+                echo "&nbsp; <span style='background-color: green; border-radius:3px; color:white; padding:4px;'> Done! <span></h3><br>";
             }else {
-                echo "</h3><br>";
+                echo "&nbsp; <span style='background-color: red; border-radius:3px; color:white; padding:4px;'> Not done! <span></h3><br>";
             }
             
-            echo "<h5>Scores: " . $scores . "</h5><br>";
+            echo "<h5>Scores: " . $scores . "</h5></div></div><br>";
         }
-    }
 }
 ?>

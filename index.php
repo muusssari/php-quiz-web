@@ -26,6 +26,7 @@
 </div>
     </div>
     <div id="right">
+    
     <?php
     if($_SESSION['permiss'] == true){
         if (!empty($_GET['page'])) 
@@ -51,6 +52,8 @@
     }
     
     ?>
+            </div>
+    </div>
     </div>
     </div>
 

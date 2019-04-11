@@ -5,7 +5,7 @@
 <div class="container-fluid">
 <div class="card"> 
             <div class="card-body">
-            <h1>Teacher Dashboard</h1>
+            <h1 class="selectH" style="font-size: 35pt;">Teacher Dashboard</h1>
             </div> 
         </div>
 
@@ -40,6 +40,8 @@
     </div>
     <script>
     function studentScores(id) {
+        document.getElementById('scores').innerHTML = "";
+
         $.ajax({
             data:{id: id},
             url: 'includes/checkScores.php',

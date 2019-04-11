@@ -42,9 +42,17 @@ header{
 }
 
 #left{
-  margin: auto;
+  max-width: 30%;
+  margin-top: 70px;
+  margin-left:35%;
   align-content:center;
 
+}
+
+#left .card{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 3rem;
 }
 
 #content{
@@ -119,7 +127,7 @@ li{
   height: 45px!important;
  
 }
-.form-control {
+.crtQuiz{
   display: inline-block!important;
 }
 
@@ -172,7 +180,9 @@ ul li button{
   }
 
 #dashLeft{
-float:left;
+position: -webkit-sticky;
+position: sticky;
+top: 0;
 }
 
 #dashMid{
@@ -227,7 +237,6 @@ float:left;
   }
 
   #id{
-    width: 30%;
     margin: auto;
     align-content: center;
     margin-top: 2%;
@@ -243,7 +252,7 @@ float:left;
   }
 
   .doneStyle{
-    color: white;
+    color: green;
     font-family: 'Abel', sans-serif; 
     font-size: 25pt;
     font-weight: bold;

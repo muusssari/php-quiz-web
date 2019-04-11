@@ -6,7 +6,7 @@ if(isset($_POST['id'])) {
     $quiz = $conn->query("SELECT * FROM quiz");
     
         while($row = $quiz->fetch_assoc()) {
-            echo "<div class='card'><div class='card-content'><h3>Quiz Name: <b style='font-size:25pt;'>" . $row['quiz'] . "</b>";
+            echo "<div class='card' style='background-color:#EEEEEE!important;'><div class='card-content'><h3>Quiz Name: <b style='font-size:25pt;'>" . $row['quiz'] . "</b>";
             $scores = 0;
             $done = false;
             $qID = $row['idQuiz'];
@@ -29,7 +29,7 @@ if(isset($_POST['id'])) {
                 echo "&nbsp; <span style='background-color: red; border-radius:3px; color:white; padding:4px;'> Not done! <span></h3><br>";
             }
             
-            echo "<h5>Scores: " . $scores . "</h5></div></div><br>";
+            echo "<h5>Scores: &nbsp;<b style='font-size:25pt;'>" . $scores . "</b></h5></div></div><br>";
         }
 }
 ?>

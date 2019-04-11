@@ -20,7 +20,7 @@
                     $students = $conn->query("SELECT * FROM users");
                     while($row = $students->fetch_assoc()) {
                         if($row["permiss"] == false) {
-                            echo '<li><button type="button" onclick="studentScores('.$row["idUsers"].')"><h3>Student: '.$row["uidUsers"].'</h3></button></li>';
+                            echo '<li><button type="button" class="btn btn-primary btn-block" onclick="studentScores('.$row["idUsers"].')"><h3>Student: '.$row["uidUsers"].'</h3></button></li>';
                         }
                     }
                     ?>
@@ -30,7 +30,7 @@
         </div>
     <div id="dashMid">
     <div class="card">
-            <div class="card-header"><h2>Quizzes completed and points: </h2></div>
+            <div class="card-header"><h2>Completed quizzes and points: </h2></div>
             <div class="card-body">
                 <ul id="scores">
                     

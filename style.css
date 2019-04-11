@@ -179,10 +179,8 @@ ul li button{
   grid-template: 40% 60%;
   }
 
-#dashLeft{
-position: -webkit-sticky;
-position: sticky;
-top: 0;
+li a:hover{
+  text-decoration: none;
 }
 
 #dashMid{
@@ -191,7 +189,7 @@ float:left;
 
   .card{
     margin-right: 4%;
-    margin-top: 6%;
+    margin-top: 3%;
     background-color: whitesmoke!important;
   }
 

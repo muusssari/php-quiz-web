@@ -32,7 +32,7 @@ function generateCreate() {
 
 
         var i4 = document.createElement("input");
-        i4.setAttribute('type',"text");
+        i4.setAttribute('type',"checkbox");
         i4.setAttribute('id',"qType");
         i4.setAttribute('placeholder','Options box for answer (true/false)');
         i4.setAttribute('class', 'form-control crtQuiz');
@@ -159,7 +159,7 @@ function save3() {
     let question = document.getElementById("question").value;
     let rightAns = document.getElementById("rightAns").value;
     let rightAnsQ = document.getElementById("rightAnsQ").value;
-    let qType = document.getElementById("qType").value;
+    let qType = document.getElementById("qType").checked;
 
     $.ajax({  
         type: 'POST',  

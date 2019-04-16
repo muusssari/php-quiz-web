@@ -23,13 +23,18 @@ if(isset($_POST['id'])) {
                     }
                 }
             }
-            if($done == 1){
-                echo "&nbsp; <span style='background-color: green; border-radius:3px; color:white; padding:4px;float:right;'> Done! <span></h3><br>";
+            if(!isset($_POST['s'])) {
+                if($done == 1){
+                    echo "&nbsp; <span style='background-color: green; border-radius:3px; color:white; padding:4px;'> Done! <span></h3><br>";
+                }else {
+                    echo "&nbsp; <span style='background-color: red; border-radius:3px; color:white; padding:4px;'> Not done! <span></h3><br>";
+                }
+                
+                echo "<h5>Scores: &nbsp;<b style='font-size:25pt;'>" . $scores . "</b></h5></div></div><br>";
             }else {
-                echo "&nbsp; <span style='background-color: red; border-radius:3px; color:white; padding:4px;float:right;'> Not done! <span></h3><br>";
+                echo $scores;
             }
             
-            echo "<h5>Scores: &nbsp;<b style='font-size:25pt;'>" . $scores . "</b></h5></div></div><br>";
         }
 }
 ?>

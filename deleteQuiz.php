@@ -19,7 +19,7 @@
                     <?php
                     $quiz = $conn->query("SELECT * FROM quiz");
                     while($row = $quiz->fetch_assoc()) {
-                        echo '<li><button type="button" class="btn btn-primary btn-block" onclick="deleteQuiz('.$row["idQuiz"].')"><h3>'.$row["quiz"].'</h3></button></li>';
+                        echo '<li><button type="button" class="buton btn btn-primary btn-block" onclick="deleteQuiz('.$row["idQuiz"].')"><h3>'.$row["quiz"].'</h3></button></li>';
                     }
                     ?>
                 </ul>
@@ -42,6 +42,12 @@
         });
         
     }
+
+    $( ".buton" ).hover(
+  function() {
+    $( this ).toggleClass('btn-danger');
+  }
+    )
 </script>
 </div>
 </div>

@@ -29,7 +29,9 @@
 
     <script>
     function deleteQuiz(id) {
+       
 
+        
         $.ajax({
             data:{id: id},
             url: 'includes/delete.php',

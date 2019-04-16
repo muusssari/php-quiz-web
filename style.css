@@ -174,10 +174,6 @@ ul li button{
   font-family: 'Abel', sans-serif;
 }
 
-#dashCont{
-  display: grid;
-  grid-template: 40% 60%;
-  }
 
 li a:hover{
   text-decoration: none;
@@ -257,5 +253,5 @@ float:left;
     margin-top: 2%;
   }
 .buton{
-  
+
 }

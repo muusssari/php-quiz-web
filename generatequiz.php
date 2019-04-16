@@ -41,7 +41,7 @@ function getSubName($conn,$subID) {
 }
 
 //------------------------------------------------
-$messures=array('Value'=>1, 'L'=>2,'ml'=>3,'mm'=>4,'g'=>5,'mg'=>6,'μm'=>7);
+$messures=array('sec'=>1, 'L'=>2,'ml'=>3,'mm'=>4,'g'=>5,'mg'=>6,'μm'=>7);
 $options='';
 // Aloitetaan formin tekeminen kysymyksille
 echo '<div class="card"><div class="card-content">';

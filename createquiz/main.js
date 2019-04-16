@@ -117,6 +117,8 @@ function generateCreate() {
 function save1() {
     let quiz = document.getElementById("quiz").value;
     let subname = document.getElementById("subname").value;
+    if(quiz != "" && subname != ""){
+    
     $.ajax({  
         type: 'POST',  
         url: 'createquiz/saveCreatedQuiz.php', 
@@ -127,6 +129,9 @@ function save1() {
     });
     start = 2;
     generateCreate();
+}else{
+    alert('Insert quiz name and sub name!')
+}
 }
 function done() {
     let done = $("<i class='doneStyle'></i>").text("Done!");
@@ -155,6 +160,7 @@ function save3() {
     let rightAns = document.getElementById("rightAns").value;
     let rightAnsQ = document.getElementById("rightAnsQ").value;
     let qType = document.getElementById("qType").value;
+
     $.ajax({  
         type: 'POST',  
         url: 'createquiz/saveCreatedQuiz.php', 

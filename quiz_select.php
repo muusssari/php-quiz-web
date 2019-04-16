@@ -23,7 +23,7 @@ if($_SESSION['permiss'] == 1) {
             $ans = $conn->query("SELECT * FROM userAns WHERE idUsers=$user AND idQuestion=$coll");
                 while($row = $ans->fetch_assoc()) {
                     $s = $row['submit'];
-                    echo "<script>console.log( 'Debug Objects 2: " . $s . "' );</script>";
+                    //echo "<script>console.log( 'Debug Objects 2: " . $s . "' );</script>";
                     if($s== 1){
                         $done = true;
                     }else {
@@ -35,7 +35,17 @@ if($_SESSION['permiss'] == 1) {
             
         }
         if($done) {
-            echo "<li><a><button style='font-size:25pt;' class='btn btn-outline-dark btn-block'>DONE</button></a></li>";
+            $collect = $conn->query("SELECT * FROM collect WHERE idQuiz=$idQ");
+            $scores = 0;
+
+            while($row = $collect->fetch_assoc()) {
+                $idQu = $row['idQuestion'];
+                $ans = $conn->query("SELECT * FROM userAns WHERE idQuestion=$idQu AND idUsers=$user");
+                while($row = $ans->fetch_assoc()) {
+                    $scores += $row['points'];
+                }
+            }
+            echo "<li><a><button style='font-size:25pt;' class='btn btn-outline-dark btn-block'>DONE, Score=". $scores  ."</button></a></li>";
         }else {
             echo "<li><a href='index.php?page=".$idQ."'><button style='font-size:25pt;' class='btn btn-outline-dark btn-block'>" . $qName. "</button></a></li>";
         }  
@@ -45,6 +55,7 @@ if($_SESSION['permiss'] == 1) {
 }
 
 ?>
+
 
 
 

@@ -13,7 +13,7 @@
   
     <div id="dashLeft">
         <div class="card">
-            <div class="card-header"><h2>Delete quiz: </h2></div>
+            <div class="card-header"><h2>Click to delete quiz: </h2></div>
             <div class="card-body">
                 <ul>
                     <?php

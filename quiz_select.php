@@ -6,6 +6,7 @@ if($_SESSION['permiss'] == 1) {
     echo "<h1 class='selectH'>What to do</h1><br>";
     echo "<li><a href='index.php?page=1'><button style='font-size:25pt;' class='btn btn-outline-dark btn-block'>Dashboard</button></a></li>";
     echo "<li><a href='index.php?page=2'><button style='font-size:25pt;' class='btn btn-outline-dark btn-block'>Create quiz</button></a></li>";
+    echo "<li><a href='index.php?page=3'><button style='font-size:25pt;' class='btn btn-outline-dark btn-block'>Quiz Made</button></a></li>";
 }else {
     $quizName = $conn->query("SELECT * FROM quiz");
     $user = $_SESSION['userId'];

@@ -50,6 +50,6 @@ function checkPoints($idQ, $conn, $valueInput, $valueDrop) {
     }
     return $points; //pisteet oikeista vastauksista
 } //input 1 piste ja drop downista 1piste, mutta jos input väärin, dropista saa 0
-//header("Location: ../index.php");
+header("Location: ../index.php");
 
 ?>

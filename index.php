@@ -35,6 +35,8 @@
                 include("dashboard.php");
             } else if($_GET['page'] == 2) {
                 include("createquiz/create.html");
+            }else if($_GET['page'] == 3){
+                include("deleteQuiz.php");
             }
             
         }

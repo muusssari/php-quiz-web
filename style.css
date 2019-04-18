@@ -142,8 +142,12 @@ li{
 }
 
 #right .card .card-content form label{
-  font-size: 25pt;
+float: left;
 }
+
+#right .card .card-content form input[type=checkbox]{
+  float: right;
+  }
 
 #right .card{
   padding: 30px;

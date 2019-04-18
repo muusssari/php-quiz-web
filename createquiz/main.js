@@ -30,12 +30,19 @@ function generateCreate() {
         i3.setAttribute('placeholder','Select right option (1-7)');
         i3.setAttribute('class', 'form-control crtQuiz');
 
+        var l1 = document.createElement("label");
+        l1.setAttribute('id',"chbLbl");
+        l1.setAttribute('style',"display:inline; ");
 
+        
+        
         var i4 = document.createElement("input");
         i4.setAttribute('type',"checkbox");
+        l1.setAttribute('style',"display:inline-block; ");
+
         i4.setAttribute('id',"qType");
-        i4.setAttribute('placeholder','Options box for answer (true/false)');
-        i4.setAttribute('class', 'form-control crtQuiz');
+        i4.setAttribute('title','Options box for answer (true/false)');
+        i4.setAttribute('class', 'form-control crtQuiz ');
 
 
         var s = document.createElement("input");
@@ -51,9 +58,13 @@ function generateCreate() {
         s2.setAttribute('onclick','save3Back2()');
         s2.setAttribute('class', 'btn btn-outline-dark create_btn');
 
-        f.appendChild(i4);
+        l1.innerHTML = "Check this box if you want dropdown with values to your question ";
+
+        l1.appendChild(i4);
+        f.appendChild(l1);
         f.appendChild(i3);
         f.appendChild(i2);
+        
     }else if(start == 2) {
         var i = document.createElement("input");
         i.setAttribute('type',"text");
@@ -110,6 +121,7 @@ function generateCreate() {
     f.appendChild(s);
     f.appendChild(s2);
     $('#id').append(f);
+    
 }
 
 
